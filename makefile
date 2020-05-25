@@ -13,6 +13,7 @@ bump:
 
 build-image:
 	docker build \
+		--build-arg NPM_TOKEN=${NPM_TOKEN} \
 		--tag ${REPOSITORY}/${NAME}:${VERSION} \
 		--tag ${REPOSITORY}/${NAME}:latest \
 		.
